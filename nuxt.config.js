@@ -44,12 +44,21 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    '@nuxtjs/apollo',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://api-useast.graphcms.com/v1/ck472jwp102hi01bq2mniai9u/master'
+      }
+    },
+    includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
   },
   /*
   ** Build configuration
