@@ -25,7 +25,7 @@
     methods: {},
     head() {
       return {
-        title: (this.post ? `${this.post.title}` : 'Loading')
+        title: (this.post ? `Cosmic Sheep | ${this.post.title}` : 'Loading...')
       }
     }
   }
