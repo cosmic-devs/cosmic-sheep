@@ -1,7 +1,6 @@
 <template>
   <div v-if="post" class="container px-6 markdown">
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.body }}</p>
+    <div class="mb-10" v-html="$md.render(post.body)"></div>
     <p>
       <NuxtLink to="/">
         Home page
