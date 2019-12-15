@@ -1,0 +1,10 @@
+query ($id: ID) {
+  post(where: {id: $id}) {
+    id
+    status
+    createdAt
+    updatedAt
+    title
+    body
+  }
+}
