@@ -45,6 +45,7 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/apollo',
+    '@nuxtjs/markdownit',
   ],
   /*
   ** Axios module configuration
@@ -59,6 +60,11 @@ export default {
       }
     },
     includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
+  },
+  markdownit: {
+    injected: true,
+    preset: 'default',
+    linkify: true,
   },
   /*
   ** Build configuration
