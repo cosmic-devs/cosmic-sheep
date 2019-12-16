@@ -1,5 +1,5 @@
 <template>
-  <div v-if="post" class="container px-6 markdown">
+  <div v-if="post" class="container markdown">
     <div class="mb-10" v-html="$md.render(post.body)"></div>
     <p>
       <NuxtLink to="/">
