@@ -75,5 +75,51 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  generate: {
+    routes: function () {
+      const query = `
+                   {
+                     posts {
+                       slug
+                     }
+                   }
+                    `;
+      this.$apollo.query({
+        query
+      }).then(res => {
+        const { data } = res
+        return data.posts.map(post => `/post/${post.slug}`);
+      }).catch(error => {
+        console.log(error)
+      })
+
+      // const staticRoutes = [
+      // ];
+      //
+      // const GRAPHCMS_API = 'URL';
+      // const apolloFetch = createApolloFetch({ uri: GRAPHCMS_API })
+      // const query = `
+      //         {
+              //   posts {
+              //     id
+              //   }
+              // }
+      //         `;
+      //
+      // return apolloFetch({ query }) // all apolloFetch arguments are optional
+      //   .then(result => {
+      //
+      //     const { data } = result
+      //     const postRoutes = data.posts.map(post => `/posts/${post.slug}?id=${post.id}`);
+      //     const tagRoutes =   data.tags.map(tag => `/tags/${tag.name}`);
+      //
+      //     return staticRoutes.concat([...postRoutes, ...tagRoutes]);
+      //   })
+      //   .catch(error => {
+      //     console.log('got error')
+      //     console.log(error)
+      //   })
+    }
   }
 }
