@@ -5,6 +5,7 @@
     createdAt
     updatedAt
     title
+    slug
     body
   }
 }

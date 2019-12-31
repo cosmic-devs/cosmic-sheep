@@ -1,10 +1,11 @@
-query ($id: ID) {
-  post(where: {id: $id}) {
+query ($slug: String) {
+  post(where: {slug: $slug}) {
     id
     status
     createdAt
     updatedAt
     title
+    slug
     body
   }
 }
