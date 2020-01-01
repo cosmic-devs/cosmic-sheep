@@ -15,6 +15,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/markdownit": "^1.2.7",
+    "apollo-fetch": "^0.7.0",
     "graphql-tag": "^2.10.1",
     "nuxt": "^2.0.0"
   },
