@@ -16,7 +16,8 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/markdownit": "^1.2.7",
     "graphql-tag": "^2.10.1",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "apollo-fetch": "latest"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0"
