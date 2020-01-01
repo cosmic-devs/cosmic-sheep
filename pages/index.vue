@@ -55,7 +55,7 @@
   }
 
   .markdown a {
-    @apply text-blue-600 font-semibold;
+    @apply text-blue-700 font-semibold;
   }
 
   .markdown strong a {
