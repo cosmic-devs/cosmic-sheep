@@ -1,3 +1,4 @@
+const { createApolloFetch } = require('apollo-fetch')
 
 export default {
   mode: 'universal',
@@ -94,18 +95,19 @@ export default {
       //   console.log(error)
       // })
 
-      // const staticRoutes = [
-      // ];
-      //
+      const staticRoutes = [
+      // static routes
+      ];
+
       const GRAPHCMS_API = 'https://api-useast.graphcms.com/v1/ck472jwp102hi01bq2mniai9u/master';
       const apolloFetch = createApolloFetch({ uri: GRAPHCMS_API })
       const query = `
-              {
-                posts {
-                  slug
-                }
-              }
-              `;
+      {
+        posts {
+          slug
+        }
+      }
+      `;
 
       return apolloFetch({ query }) // all apolloFetch arguments are optional
         .then(result => {
