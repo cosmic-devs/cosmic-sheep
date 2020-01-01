@@ -1,4 +1,5 @@
 const { createApolloFetch } = require('apollo-fetch')
+import postsIdentifiers from '~/apollo/queries/postsIdentifiers'
 
 export default {
   mode: 'universal',
@@ -79,35 +80,13 @@ export default {
   },
   generate: {
     routes: function () {
-      // const query = `
-      //              {
-      //                posts {
-      //                  slug
-      //                }
-      //              }
-      //               `;
-      // this.$apollo.query({
-      //   query
-      // }).then(res => {
-      //   const { data } = res
-      //   return data.posts.map(post => `/post/${post.slug}`);
-      // }).catch(error => {
-      //   console.log(error)
-      // })
-
       const staticRoutes = [
       // static routes
       ];
 
       const GRAPHCMS_API = 'https://api-useast.graphcms.com/v1/ck472jwp102hi01bq2mniai9u/master';
       const apolloFetch = createApolloFetch({ uri: GRAPHCMS_API })
-      const query = `
-      {
-        posts {
-          slug
-        }
-      }
-      `;
+      const query = postsIdentifiers;
 
       return apolloFetch({ query }) // all apolloFetch arguments are optional
         .then(result => {
