@@ -50,8 +50,7 @@
 
 <script>
   import posts from '~/apollo/queries/posts'
-  import particles from '~/components/particles'
-  import Particles from "../components/Particles";
+  import Particles from '~/components/Particles'
 
   export default {
     transition: 'default',
