@@ -55,9 +55,6 @@
   export default {
     transition: 'default',
     components: {Particles},
-    comments: {
-      particles
-    },
     apollo: {
       posts: {
         prefetch: true,
