@@ -108,8 +108,9 @@ type Post implements Node {
   body: String
   createdAt: DateTime!
   id: ID!
+  slug: String!
   status: Status!
-  title: String
+  title: String!
   updatedAt: DateTime!
 }
 
@@ -134,8 +135,9 @@ type PostPreviousValues {
   body: String
   createdAt: DateTime!
   id: ID!
+  slug: String!
   status: Status!
-  title: String
+  title: String!
   updatedAt: DateTime!
 }
 
@@ -230,6 +232,8 @@ enum PostOrderByInput {
   createdAt_DESC
   id_ASC
   id_DESC
+  slug_ASC
+  slug_DESC
   status_ASC
   status_DESC
   title_ASC
@@ -563,8 +567,9 @@ input ImageTransformationInput {
 
 input PostCreateInput {
   body: String
+  slug: String!
   status: Status
-  title: String
+  title: String!
 }
 
 input PostSubscriptionWhereInput {
@@ -587,12 +592,14 @@ input PostSubscriptionWhereInput {
 
 input PostUpdateInput {
   body: String
+  slug: String
   status: Status
   title: String
 }
 
 input PostUpdateManyMutationInput {
   body: String
+  slug: String
   status: Status
   title: String
 }
@@ -674,6 +681,33 @@ input PostWhereInput {
   id_not_starts_with: ID
   "All values starting with the given string."
   id_starts_with: ID
+  slug: String
+  "All values containing the given string."
+  slug_contains: String
+  "All values ending with the given string."
+  slug_ends_with: String
+  "All values greater than the given value."
+  slug_gt: String
+  "All values greater than or equal the given value."
+  slug_gte: String
+  "All values that are contained in given list."
+  slug_in: [String!]
+  "All values less than the given value."
+  slug_lt: String
+  "All values less than or equal the given value."
+  slug_lte: String
+  "All values that are not equal to given value."
+  slug_not: String
+  "All values not containing the given string."
+  slug_not_contains: String
+  "All values not ending with the given string."
+  slug_not_ends_with: String
+  "All values that are not contained in given list."
+  slug_not_in: [String!]
+  "All values not starting with the given string."
+  slug_not_starts_with: String
+  "All values starting with the given string."
+  slug_starts_with: String
   status: Status
   "All values that are contained in given list."
   status_in: [Status!]
@@ -727,6 +761,8 @@ input PostWhereInput {
 
 input PostWhereUniqueInput {
   id: ID
+  slug: String
+  title: String
 }
 
 
