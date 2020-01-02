@@ -20,6 +20,7 @@
     "apollo-fetch": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0"
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "vue-particles": "^1.0.9"
   }
 }

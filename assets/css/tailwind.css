@@ -1,3 +1,76 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/*============================== Global configuration ==============================*/
+
+
+html {
+  font-size: 14px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+@screen md {
+  html {
+    font-size: 14px;
+  }
+}
+
+@screen lg {
+  html {
+    font-size: 18px;
+  }
+}
+
+@screen xl {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  min-width: 360px;
+  @apply m-auto
+}
+
+header,
+section,
+footer {
+  @apply relative
+}
+
+img {
+  @apply w-full;
+}
+
+h1 {
+  font-family: 'Vollkorn', serif;
+  @apply text-6xl text-blue-500 leading-none;
+}
+
+h2 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  @apply text-4xl text-blue-500 leading-tight;
+}
+
+h3 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  @apply text-lg text-blue-500 leading-tight;
+}
+
+p,
+ul,
+label,
+input,
+select {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  @apply text-base leading-tight;
+}
+
+p.desc {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  @apply text-xs;
+}
+
+/*============================== Project styling ==============================*/
