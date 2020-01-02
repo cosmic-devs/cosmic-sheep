@@ -1,5 +1,5 @@
 {
-  posts {
+  posts(orderBy: createdAt_DESC) {
     id
     status
     createdAt
