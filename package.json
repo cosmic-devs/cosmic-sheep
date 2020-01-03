@@ -1,7 +1,7 @@
 {
-  "name": "cosmic-language",
+  "name": "cosmic-sheep",
   "version": "1.0.0",
-  "description": "Language learning project related to Urantia Book",
+  "description": "We are a young people study group passionated about Urantia Book and its awesome teachings given to this world.",
   "author": "Pablo Miceli",
   "private": true,
   "scripts": {

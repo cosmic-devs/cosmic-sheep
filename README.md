@@ -1,6 +1,6 @@
-# cosmic-language
+# Cosmic Sheep
 
-> Language learning project related to Urantia Book
+> We are a young people study group passionated about Urantia Book and its awesome teachings given to this world.
 
 ## Build Setup
 
