@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="mx-auto rounded-full bg-blue-100 w-auto p-10 shadow-2xl">
-          <h2 class="text-3xl mb-2">Blog</h2>
+          <h2 class="text-3xl text-blue-600 mb-2">Blog</h2>
           <ul class="text-blue-700 font-semibold">
             <li class="hover:text-blue-400" v-for="post in posts" :key="post.id">
               <NuxtLink :to="`post/${post.slug}`">
@@ -36,7 +36,7 @@
     </header>
     <section class="pb-10">
       <div class="pt-10">
-        <h2 class="text-center text-3xl text-blue-500 mb-2">
+        <h2 class="text-center text-3xl mb-2">
           Em breve...
         </h2>
         <p class="text-center mb-3">
