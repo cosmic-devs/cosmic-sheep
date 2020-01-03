@@ -62,7 +62,7 @@
       }
     },
     head: {
-      title: 'Cosmic Sheep | Posts'
+      title: 'Cosmic Sheep | Home'
     },
     methods: {
       formatDate(date) {
