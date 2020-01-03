@@ -42,7 +42,11 @@
         <p class="text-center mb-3">
           Nosso e-mail: <a class="text-blue-800 hover:text-blue-700" href="mailto:contact@cosmicsheep.io">contact@cosmicsheep.io</a>
         </p>
-        <img class="w-4 mx-auto" src="~assets/img/logo.png" alt="Logo Cosmic Sheep Michael">
+        <picture>
+          <source srcset="~assets/img/logo.webp" type="image/webp">
+          <source srcset="~assets/img/logo.png" type="image/png">
+          <img class="w-4 mx-auto" src="~assets/img/logo.png" alt="Logo Cosmic Sheep Michael Urantia">
+        </picture>
       </div>
     </section>
   </div>
