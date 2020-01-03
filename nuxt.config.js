@@ -17,7 +17,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Cinzel|Montserrat|Open+Sans|Playfair+Display|Vollkorn&display=swap' }
     ]
   },
   /*
@@ -52,6 +51,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/apollo',
     '@nuxtjs/markdownit',
+    'nuxt-webfontloader',
   ],
   /*
   ** Axios module configuration
@@ -71,6 +71,13 @@ export default {
     injected: true,
     preset: 'default',
     linkify: true,
+  },
+  webfontloader: {
+    google: {
+      families: [
+        'Montserrat|Vollkorn&display=swap'
+      ]
+    }
   },
   /*
   ** Build configuration
