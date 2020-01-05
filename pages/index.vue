@@ -2,29 +2,29 @@
   <div>
     <header class="h-screen">
       <!-- particles.js container -->
-      <Particles class="absolute" />
+      <Particles class="absolute"/>
       <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-      <div class="container flex flex-row-reverse flex-wrap items-center h-full relative">
-        <div class="flex flex-1 items-center justify-center">
+      <div class="container relative flex flex-row-reverse flex-wrap items-center h-full">
+        <div class="flex items-center justify-center flex-1">
           <div>
-            <h1 class="text-center text-blue-200 text-4xl relative pb-6">
+            <h1 class="relative pb-6 text-4xl text-center text-blue-200">
               Cosmic Sheep<span class="text-3xl text-blue-400"> .io</span>
             </h1>
-            <p class="text-center tracking-wider text-blue-400">
+            <p class="tracking-wider text-center text-blue-400">
               "A eternidade é feita de momento a momento..."
             </p>
 
             <!--to later
-            <p class="text-center text-xl py-6 tracking-wider text-blue-600">
+            <p class="py-6 text-xl tracking-wider text-center text-blue-600">
                 Vivência e valores
             </p>
             <img class="w-40 mx-auto" src="img/head-camp-img.svg" alt="Camping image">
             -->
           </div>
         </div>
-        <div class="mx-auto rounded-full bg-blue-100 w-auto p-10 shadow-2xl">
-          <h2 class="text-3xl text-blue-600 mb-2">Blog</h2>
-          <ul class="text-blue-700 font-semibold">
+        <div class="w-auto p-10 mx-auto bg-blue-100 rounded-full shadow-2xl">
+          <h2 class="mb-2 text-3xl text-blue-600">Blog</h2>
+          <ul class="font-semibold text-blue-700">
             <li class="hover:text-blue-400" v-for="post in posts" :key="post.id">
               <NuxtLink :to="`post/${post.slug}`">
                 {{ formatDate(post.createdAt) }} - {{ post.title }}
@@ -36,10 +36,10 @@
     </header>
     <section class="pb-10">
       <div class="pt-10">
-        <h2 class="text-center text-3xl mb-2">
+        <h2 class="mb-2 text-3xl text-center">
           Em breve...
         </h2>
-        <p class="text-center mb-3">
+        <p class="mb-3 text-center">
           Nosso e-mail: <a class="text-blue-800 hover:text-blue-700" href="mailto:contact@cosmicsheep.io">contact@cosmicsheep.io</a>
         </p>
         <picture>
@@ -101,8 +101,8 @@
   }
 
   header {
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 60%, rgba(0,148,179,1) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 60%, rgba(0, 148, 179, 1) 100%);
     height: 100%;
     width: 100%;
   }
