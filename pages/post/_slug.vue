@@ -13,6 +13,9 @@
   import post from '~/apollo/queries/post'
 
   export default {
+    transition: {
+      name: 'slide-fade'
+    },
     apollo: {
       post: {
         query: post,

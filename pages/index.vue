@@ -57,7 +57,9 @@
   import Particles from '~/components/Particles'
 
   export default {
-    transition: 'default',
+    transition: {
+      name: 'slide-fade'
+    },
     components: {Particles},
     apollo: {
       posts: {
@@ -81,16 +83,12 @@
 </script>
 
 <style>
-  /* Transitions using the page hook */
-  .page-enter-active {
-    transition: all 0.10s ease-out;
+  .slide-fade-enter-active, .slide-fade-leave-active {
+    transition: transform .4s, opacity .4s;
   }
 
-  .page-leave-active {
-    transition: all 0.10s ease-in;
-  }
-
-  .page-enter, .page-leave-active {
+  .slide-fade-enter, .slide-fade-leave-to {
+    transform: translateX(50px);
     opacity: 0;
   }
 
