@@ -9,7 +9,7 @@
       linesColor="#dedede"
       :linesWidth="1"
       :lineLinked="true"
-      :lineOpacity="0"
+      :lineOpacity="0.4"
       :linesDistance="150"
       :moveSpeed="0.4"
       :hoverEffect="false"
