@@ -7,10 +7,10 @@
       <div class="container relative flex flex-col md:flex-row-reverse md:flex-wrap items-center justify-around h-full">
         <div class="flex items-center justify-center md:flex-1">
           <div>
-            <h1 class="relative pb-6 text-4xl md:text-6xl text-center text-blue-200">
-              Cosmic Sheep<span class="text-3xl md:text-5xl text-blue-400"> .io</span>
+            <h1 class="relative pb-6 text-4xl lg:text-6xl text-center text-blue-200">
+              Cosmic Sheep<span class="text-3xl lg:text-5xl text-blue-400"> .io</span>
             </h1>
-            <p class="tracking-wider text-center text-blue-400 text-lg md:text-2xl">
+            <p class="tracking-wider text-center text-blue-400 text-lg xl:text-2xl">
               "A eternidade é feita de momento a momento..."
             </p>
 
