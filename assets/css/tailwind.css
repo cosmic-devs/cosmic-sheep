@@ -75,3 +75,16 @@ p.desc {
 }
 
 /*============================== Project styling ==============================*/
+
+.content img {
+  margin: 2rem 0 2rem 0
+}
+
+.content blockquote {
+  margin: 1rem 0 1rem 0
+}
+
+.content h1 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  @apply text-6xl text-blue-500 leading-none;
+}

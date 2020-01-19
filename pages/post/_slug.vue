@@ -1,6 +1,6 @@
 <template>
   <div v-if="post" class="container markdown">
-    <div class="mb-10" v-html="$md.render(post.body)"></div>
+    <div class="mb-10 content" v-html="$md.render(post.body)"></div>
     <p>
       <NuxtLink to="/">
         Home page
