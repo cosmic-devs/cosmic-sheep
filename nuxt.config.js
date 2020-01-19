@@ -110,7 +110,7 @@ export default {
 
           const { data } = result
           // const postRoutes = data.posts.map(post => `/post/${post.slug}?id=${post.id}`);
-          const postRoutes = data.posts.map(post => `/post/${post.slug}`);
+          const postRoutes = data.posts.map(post => `/posts/${post.slug}`);
           // const tagRoutes =   data.tags.map(tag => `/tags/${tag.name}`);
 
           // return staticRoutes.concat([...postRoutes, ...tagRoutes]);
