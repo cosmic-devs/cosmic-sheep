@@ -1,5 +1,13 @@
 <template>
   <div v-if="post" class="container markdown">
+    <header class="text-center">
+      <h1 class="pb-6 text-4xl text-center text-blue-300">
+        Cosmic Sheep<span class="text-3xl text-blue-400"> .io</span>
+      </h1>
+      <p class="tracking-wider text-center text-blue-400">
+        "A eternidade é feita de momento a momento..."
+      </p>
+    </header>
     <div class="mb-10 content" v-html="$md.render(post.body)"></div>
     <p>
       <NuxtLink to="/">
