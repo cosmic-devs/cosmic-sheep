@@ -7,10 +7,10 @@
       <div class="container relative flex flex-col md:flex-row-reverse md:flex-wrap items-center justify-around h-full">
         <div class="flex items-center justify-center md:flex-1">
           <div>
-            <h1 class="relative pb-6 text-4xl text-center text-blue-200">
-              Cosmic Sheep<span class="text-3xl text-blue-400"> .io</span>
+            <h1 class="relative pb-6 text-4xl md:text-6xl text-center text-blue-200">
+              Cosmic Sheep<span class="text-3xl md:text-5xl text-blue-400"> .io</span>
             </h1>
-            <p class="tracking-wider text-center text-blue-400">
+            <p class="tracking-wider text-center text-blue-400 text-lg md:text-2xl">
               "A eternidade é feita de momento a momento..."
             </p>
 
@@ -22,7 +22,7 @@
             -->
           </div>
         </div>
-        <div class="w-auto max-w-sm p-10 mx-auto bg-blue-100 rounded-full shadow-2xl">
+        <div class="w-auto max-w-sm p-6 mx-auto bg-blue-100 rounded-lg shadow-2xl">
           <h2 class="mb-2 text-3xl text-blue-600">Blog</h2>
           <ul class="font-semibold text-blue-700">
             <li class="hover:text-blue-400" v-for="post in posts" :key="post.id">
