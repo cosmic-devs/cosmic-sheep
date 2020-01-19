@@ -1,6 +1,6 @@
 <template>
   <div v-if="post" class="container markdown">
-    <header class="text-center">
+    <header class="text-center mb-16">
       <h1 class="pb-6 text-4xl text-center text-blue-300">
         Cosmic Sheep<span class="text-3xl text-blue-400"> .io</span>
       </h1>
