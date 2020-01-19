@@ -1,5 +1,5 @@
 <template>
-  <div v-if="post" class="container markdown">
+  <div class="markdown">
     <header class="text-center mb-16">
       <h1 class="pb-6 text-4xl text-center text-blue-300">
         Cosmic Sheep<span class="text-3xl text-blue-400"> .io</span>
@@ -8,12 +8,14 @@
         "A eternidade é feita de momento a momento..."
       </p>
     </header>
-    <div class="mb-10 content" v-html="$md.render(post.body)"></div>
-    <p>
-      <NuxtLink to="/">
-        Home page
-      </NuxtLink>
-    </p>
+    <div v-if="post" class="container markdown">
+      <div class="mb-10 content" v-html="$md.render(post.body)"></div>
+      <p>
+        <NuxtLink to="/">
+          Home page
+        </NuxtLink>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -65,6 +67,10 @@
     @apply mt-6;
   }
 
+  .markdown p {
+    @apply py-2;
+  }
+
   .markdown strong {
     @apply font-semibold;
   }
@@ -102,7 +108,7 @@
   }
 
   .markdown blockquote {
-    @apply text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-600;
+    @apply text-base border-l-4 border-gray-300 pl-4 ml-10 pr-4 text-gray-600;
   }
 
   .markdown code {
