@@ -75,7 +75,7 @@ export default {
   webfontloader: {
     google: {
       families: [
-        'Montserrat|Vollkorn&display=swap'
+        'Quicksand:wght@400;600;700&display=swap'
       ]
     }
   },

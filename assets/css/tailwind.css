@@ -4,32 +4,21 @@
 
 /*============================== Global configuration ==============================*/
 
-
 html {
-  font-size: 14px;
+  font-size: 16px;
   overflow-y: scroll;
   overflow-x: hidden;
+  @apply bg-blue-100
 }
 
-@screen md {
-  html {
-    font-size: 14px;
-  }
-}
-
-@screen lg {
+@screen xl {
   html {
     font-size: 18px;
   }
 }
 
-@screen xl {
-  html {
-    font-size: 20px;
-  }
-}
-
 body {
+  font-family: 'Quicksand', 'Helvetica Neue', Arial, sans-serif;
   min-width: 360px;
   @apply m-auto
 }
@@ -44,33 +33,11 @@ img {
   @apply w-full;
 }
 
-h1 {
-  font-family: 'Vollkorn', serif;
-  @apply text-6xl text-blue-500 leading-none;
-}
-
-h2 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  @apply text-4xl text-blue-500 leading-tight;
-}
-
-h3 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  @apply text-lg text-blue-500 leading-tight;
-}
-
-p,
-ul,
-label,
-input,
-select {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  @apply text-base leading-tight;
-}
-
-p.desc {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  @apply text-xs;
+h1, 
+h2, 
+h3 
+{
+  font-family: 'Quicksand', Arial, sans-serif;
 }
 
 /*============================== Project styling ==============================*/
@@ -80,6 +47,5 @@ p.desc {
 }
 
 .content h1 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   @apply text-6xl text-blue-500 leading-none;
 }
