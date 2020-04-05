@@ -13,7 +13,12 @@ module.exports = {
     },
     extend: {
       colors: {
-      	'blue-800': '#002A55'
+      	'blue-100': '#FBFBFF',
+      	'blue-500': '#007FFF',
+      	'blue-600': '#005DBB',
+      	'blue-800': '#002A55',
+      	'gray-700': '#707070',
+      	'gray-600': '#908F8F',
       }
     }
   },
