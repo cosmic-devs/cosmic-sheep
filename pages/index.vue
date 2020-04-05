@@ -69,7 +69,7 @@
     },
     methods: {
       formatDate(date) {
-        return new Date(date).toLocaleString(undefined, {
+        return new Date(date).toLocaleString('ko-KR', {
           year: '2-digit',
           month: '2-digit',
           day: '2-digit'
