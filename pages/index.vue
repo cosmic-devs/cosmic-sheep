@@ -24,7 +24,7 @@
       <section>
         <div class="text-center">
           <h2 class="font-bold text-gray-600 text-lg">
-            Siga-me até a próxima esfera:
+            Siga-nos até a próxima esfera:
           </h2>
           <p class="mb-3 font-bold text-center text-blue-600 text-xl">
             <a target="_blank" href="https://discord.gg/Z4TPUEX">discord</a> ⩩ 
