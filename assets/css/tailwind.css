@@ -4,17 +4,10 @@
 
 /*============================== Global configuration ==============================*/
 
-
 html {
-  font-size: 14px;
+  font-size: 16px;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-
-@screen md {
-  html {
-    font-size: 14px;
-  }
 }
 
 @screen lg {
@@ -25,7 +18,7 @@ html {
 
 @screen xl {
   html {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
