@@ -1,14 +1,16 @@
 <template>
-  <div class="markdown">
-    <header class="text-center mb-16">
-      <h1 class="pb-6 text-4xl text-center text-blue-300">
-        Cosmic Sheep<span class="text-3xl text-blue-400"> .io</span>
-      </h1>
-      <p class="tracking-wider text-center text-blue-400">
-        "A eternidade é feita de momento a momento..."
-      </p>
+  <div class="">
+    <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
+      <div class="mx-auto max-w-2xl">
+        <nuxtLink to="/" class="text-2xl text-blue-500 leading-none border-none mb-0">
+          cosmic sheep
+        </nuxtLink>
+        <p class="text-sm text-blue-500 opacity-50">
+          study group
+        </p>
+      </div>
     </header>
-    <div v-if="post" class="container markdown">
+    <div v-if="post" class="container markdown max-w-2xl">
       <div class="mb-10 content" v-html="$md.render(post.body)"></div>
       <p>
         <NuxtLink to="/">
