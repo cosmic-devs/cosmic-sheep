@@ -12,9 +12,9 @@
     </header>
     <div class="mt-12 mx-auto px-3 max-w-2xl">
       <section class="pb-20 mb-32">
-        <h2 class="mb-6 font-bold text-2xl text-center text-blue-600">Arquivo</h2>
+        <h2 class="mb-6 font-bold text-2xl text-center text-blue-600">Arquivos</h2>
         <ul class="text-gray-700 text-center">
-          <li class="hover:text-blue-400" v-for="post in posts" :key="post.id">
+          <li class="mb-2 hover:text-blue-400" v-for="post in posts" :key="post.id">
             <NuxtLink :to="`posts/${post.slug}`">
               {{ formatDate(post.createdAt) }} - {{ post.title }}
             </NuxtLink>
