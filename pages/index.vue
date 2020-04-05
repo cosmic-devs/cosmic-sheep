@@ -2,10 +2,10 @@
   <div>
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
-        <nuxtLink to="/" class="text-2xl text-blue-500 leading-none border-none mb-0">
+        <nuxtLink to="/" class="mb-0 text-2xl text-blue-500 leading-none">
           cosmic sheep
         </nuxtLink>
-        <p class="text-sm text-blue-500 opacity-50">
+        <p class="-mt-1 text-sm text-blue-500 opacity-50">
           study group
         </p>
       </div>
