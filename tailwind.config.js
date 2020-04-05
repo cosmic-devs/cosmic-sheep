@@ -6,12 +6,16 @@
 */
 module.exports = {
   theme: {
-
     // Customizations
     container: {
       center: true,
       padding: '2rem',
     },
+    extend: {
+      colors: {
+      	'blue-800': '#002A55'
+      }
+    }
   },
   variants: {},
   plugins: []
