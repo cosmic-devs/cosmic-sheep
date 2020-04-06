@@ -27,9 +27,9 @@
             Siga-nos até a próxima esfera:
           </h2>
           <p class="mb-3 font-bold text-center text-blue-600 text-xl">
-            <a target="_blank" href="https://discord.gg/Z4TPUEX">discord</a> ⩩ 
-            <a target="_blank" href="https://www.instagram.com/ovelhacosmica/?hl=pt-br">instagram</a> ⩩ 
-            e-mail
+            <a target="_blank" rel="nofollow" href="https://discord.gg/Z4TPUEX">discord</a> ⩩
+            <a target="_blank" rel="nofollow" href="https://www.instagram.com/ovelhacosmica">instagram</a> ⩩
+            <span @click="contactModal.show = true" class="cursor-pointer">contato</span>
             <!-- Nosso e-mail: <a class="text-blue-800 hover:text-blue-700" href="mailto:contact@cosmicsheep.io">contact@cosmicsheep.io</a> -->
           </p>
         </div>
@@ -46,18 +46,27 @@
           </picture>
       </footer>
     </div>
+    <contact-modal :contact-modal="contactModal" @close="contactCloseHandler" />
   </div>
 </template>
 
 <script>
   import posts from '~/apollo/queries/posts'
-  import Particles from '~/components/Particles'
+  import ContactModal from "~/components/ContactModal"
 
   export default {
     transition: {
       name: 'slide-fade'
     },
-    components: {Particles},
+    components: {ContactModal},
+    data() {
+      return {
+        contactModal: {
+          show: false,
+          showForm: false
+        }
+      }
+    },
     apollo: {
       posts: {
         prefetch: true,
@@ -74,6 +83,10 @@
           month: '2-digit',
           day: '2-digit'
         })
+      },
+      contactCloseHandler() {
+        this.contactModal.show = false
+        this.contactModal.showForm = false
       }
     }
   }
