@@ -6,10 +6,5 @@
       "use": "@nuxtjs/now-builder",
       "config": {}
     }
-  ],
-  "build": {
-    "env": {
-      "EMAILJS_USER_ID": "@emailjs-user-id"
-    }
-  }
+  ]
 }
