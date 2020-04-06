@@ -2,9 +2,9 @@
   <div>
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
-        <nuxtLink to="/" class="mb-0 text-2xl text-blue-500 leading-none">
+        <n-link to="/" class="mb-0 text-2xl text-blue-500 leading-none">
           cosmic sheep
-        </nuxtLink>
+        </n-link>
         <p class="-mt-1 text-sm text-blue-500 opacity-50">
           study group
         </p>
@@ -15,9 +15,9 @@
         <h2 class="mb-6 font-bold text-2xl text-center text-blue-600">Arquivos</h2>
         <ul class="text-gray-700 text-center">
           <li class="mb-2 hover:text-blue-400" v-for="post in posts" :key="post.id">
-            <NuxtLink :to="`posts/${post.slug}`">
+            <n-link :to="`posts/${post.slug}`">
               {{ formatDate(post.createdAt) }} - {{ post.title }}
-            </NuxtLink>
+            </n-link>
           </li>
         </ul>
       </section>
@@ -27,8 +27,8 @@
             Siga-nos até a próxima esfera:
           </h2>
           <p class="mb-3 font-bold text-center text-blue-600 text-xl">
-            <a target="_blank" href="https://discord.gg/Z4TPUEX">discord</a> ⩩ 
-            <a target="_blank" href="https://www.instagram.com/ovelhacosmica/?hl=pt-br">instagram</a> ⩩ 
+            <a target="_blank" rel="nofollow" href="https://discord.gg/Z4TPUEX">discord</a> ⩩
+            <a target="_blank" rel="nofollow" href="https://www.instagram.com/ovelhacosmica">instagram</a> ⩩
             e-mail
             <!-- Nosso e-mail: <a class="text-blue-800 hover:text-blue-700" href="mailto:contact@cosmicsheep.io">contact@cosmicsheep.io</a> -->
           </p>
@@ -60,7 +60,6 @@
     components: {Particles},
     apollo: {
       posts: {
-        prefetch: true,
         query: posts
       }
     },
