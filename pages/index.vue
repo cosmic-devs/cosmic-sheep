@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- Modals -->
+    <contact-modal :state="contactModal" @close="closeContactModal"/>
+    <!-- End Modals -->
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
         <nuxtLink to="/" class="mb-0 text-2xl text-blue-500 leading-none">
@@ -39,20 +42,19 @@
           <!-- somos ∴ arquivos ∴ livros ∴ campanhas -->
           A eternidade é feita de momento a momento
         </p>
-          <picture>
-            <source srcset="~assets/img/logo.webp" type="image/webp">
-            <source srcset="~assets/img/logo.png" type="image/png">
-            <img class="my-3 w-4 mx-auto" src="~assets/img/logo.png" alt="Logo Cosmic Sheep Michael Urantia">
-          </picture>
+        <picture>
+          <source srcset="~assets/img/logo.webp" type="image/webp">
+          <source srcset="~assets/img/logo.png" type="image/png">
+          <img class="my-3 w-4 mx-auto" src="~assets/img/logo.png" alt="Logo Cosmic Sheep Michael Urantia">
+        </picture>
       </footer>
     </div>
-    <contact-modal :contact-modal="contactModal" @close="contactCloseHandler" />
   </div>
 </template>
 
 <script>
   import posts from '~/apollo/queries/posts'
-  import ContactModal from "~/components/ContactModal"
+  import ContactModal from '~/components/ContactModal'
 
   export default {
     transition: {
@@ -63,7 +65,7 @@
       return {
         contactModal: {
           show: false,
-          showForm: false
+          showContent: false
         }
       }
     },
@@ -84,9 +86,8 @@
           day: '2-digit'
         })
       },
-      contactCloseHandler() {
-        this.contactModal.show = false
-        this.contactModal.showForm = false
+      closeContactModal() {
+        this.contactModal.showContent = false
       }
     }
   }
