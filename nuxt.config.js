@@ -33,7 +33,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/particles.client.js' }
+    { src: '~/plugins/particles.client.js' },
+    '~/plugins/directives'
   ],
   /*
   ** Nuxt.js dev-modules
