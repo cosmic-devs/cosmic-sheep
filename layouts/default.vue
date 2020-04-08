@@ -23,18 +23,19 @@ html {
   margin: 0;
 }
 
-.button--green {
+.button--blue {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+  border: 1px solid #005DBB;
+  color: #005DBB;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 10px 15px;
 }
 
-.button--green:hover {
+.button--blue:hover {
   color: #fff;
-  background-color: #3b8070;
+  background-color: #005DBB;
+  @apply transition duration-300
 }
 
 .button--grey {

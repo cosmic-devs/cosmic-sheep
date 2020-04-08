@@ -1,5 +1,10 @@
 <template>
   <div>
+    <!-- Modals -->
+    <base-modal :state="contactModal" @close="closeContactModal">
+      <contact-form @close="closeContactModal"/>
+    </base-modal>
+    <!-- End Modals -->
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
         <n-link to="/" class="mb-0 text-2xl text-blue-500 leading-none">
@@ -29,7 +34,7 @@
           <p class="mb-3 font-bold text-center text-blue-600 text-xl">
             <a target="_blank" rel="nofollow" href="https://discord.gg/Z4TPUEX">discord</a> ⩩
             <a target="_blank" rel="nofollow" href="https://www.instagram.com/ovelhacosmica">instagram</a> ⩩
-            e-mail
+            <span @click="contactModal.show = true" class="cursor-pointer">contato</span>
             <!-- Nosso e-mail: <a class="text-blue-800 hover:text-blue-700" href="mailto:contact@cosmicsheep.io">contact@cosmicsheep.io</a> -->
           </p>
         </div>
@@ -39,11 +44,11 @@
           <!-- somos ∴ arquivos ∴ livros ∴ campanhas -->
           A eternidade é feita de momento a momento
         </p>
-          <picture>
-            <source srcset="~assets/img/logo.webp" type="image/webp">
-            <source srcset="~assets/img/logo.png" type="image/png">
-            <img class="my-3 w-4 mx-auto" src="~assets/img/logo.png" alt="Logo Cosmic Sheep Michael Urantia">
-          </picture>
+        <picture>
+          <source srcset="~assets/img/logo.webp" type="image/webp">
+          <source srcset="~assets/img/logo.png" type="image/png">
+          <img class="my-3 w-4 mx-auto" src="~assets/img/logo.png" alt="Logo Cosmic Sheep Michael Urantia">
+        </picture>
       </footer>
     </div>
   </div>
@@ -51,13 +56,22 @@
 
 <script>
   import posts from '~/apollo/queries/posts'
-  import Particles from '~/components/Particles'
+  import BaseModal from '~/components/BaseModal'
+  import ContactForm from '~/components/ContactForm'
 
   export default {
     transition: {
       name: 'slide-fade'
     },
-    components: {Particles},
+    components: {ContactForm, BaseModal},
+    data() {
+      return {
+        contactModal: {
+          show: false,
+          showContent: false
+        }
+      }
+    },
     apollo: {
       posts: {
         query: posts
@@ -73,6 +87,9 @@
           month: '2-digit',
           day: '2-digit'
         })
+      },
+      closeContactModal() {
+        this.contactModal.showContent = false
       }
     }
   }

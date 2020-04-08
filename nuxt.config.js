@@ -27,12 +27,14 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/css/hover'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/particles.client.js' }
+    '~/plugins/v-focus-trap.directive',
+    '~/plugins/v-on-escape.directive'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -52,12 +54,16 @@ export default {
     '@nuxtjs/apollo',
     '@nuxtjs/markdownit',
     'nuxt-webfontloader',
+    '@nuxtjs/toast',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  toast: {
+    position: 'bottom-right'
   },
   apollo: {
     clientConfigs: {
