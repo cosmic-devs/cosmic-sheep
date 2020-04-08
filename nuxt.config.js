@@ -33,7 +33,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/particles.client.js' },
     '~/plugins/v-focus-trap.directive',
     '~/plugins/v-on-escape.directive'
   ],
