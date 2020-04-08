@@ -7,9 +7,9 @@
     <!-- End Modals -->
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
-        <nuxtLink to="/" class="mb-0 text-2xl text-blue-500 leading-none">
+        <n-link to="/" class="mb-0 text-2xl text-blue-500 leading-none">
           cosmic sheep
-        </nuxtLink>
+        </n-link>
         <p class="-mt-1 text-sm text-blue-500 opacity-50">
           study group
         </p>
@@ -20,9 +20,9 @@
         <h2 class="mb-6 font-bold text-2xl text-center text-blue-600">Arquivos</h2>
         <ul class="text-gray-700 text-center">
           <li class="mb-2 hover:text-blue-400" v-for="post in posts" :key="post.id">
-            <NuxtLink :to="`posts/${post.slug}`">
+            <n-link :to="`posts/${post.slug}`">
               {{ formatDate(post.createdAt) }} - {{ post.title }}
-            </NuxtLink>
+            </n-link>
           </li>
         </ul>
       </section>
@@ -74,7 +74,6 @@
     },
     apollo: {
       posts: {
-        prefetch: true,
         query: posts
       }
     },

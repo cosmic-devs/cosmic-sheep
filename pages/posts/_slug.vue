@@ -2,9 +2,9 @@
   <div class="">
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
-        <nuxtLink to="/" class="text-2xl text-blue-500 leading-none">
+        <n-link to="/" class="text-2xl text-blue-500 leading-none">
           cosmic sheep
-        </nuxtLink>
+        </n-link>
         <p class="-mt-1 text-sm text-blue-500 opacity-50">
           study group
         </p>
@@ -13,9 +13,9 @@
     <div v-if="post" class="container markdown max-w-2xl">
       <div class="mb-10 content" v-html="$md.render(post.body)"></div>
       <p>
-        <NuxtLink to="/">
+        <n-link to="/">
           Home page
-        </NuxtLink>
+        </n-link>
       </p>
     </div>
   </div>
