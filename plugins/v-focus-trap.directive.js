@@ -1,5 +1,11 @@
 import Vue from 'vue'
 
+/* use:
+<component v-on-escape="closeMethodOnComponent">
+*/
+// Remember to remove out-line styling from component,
+// since it becomes focused when this directive is inserted
+
 const focusTrap = {
   retainFocus(event) {
     let key = ''
@@ -51,28 +57,11 @@ const focusTrap = {
     el.tabIndex = '-1'
     focusTrap.el = el
     el.addEventListener('keydown', focusTrap.retainFocus)
+    el.focus()
   },
   unbind(el) {
     el.removeEventListener('keydown', focusTrap.retainFocus)
   }
 }
 
-const escape = {
-  bind(el, {value, modifiers}) {
-    el._keyHandler = (e) => {
-      if ('key' in e) {
-        if (e.key === 'Escape' || e.key === 'Esc') {
-          e.preventDefault()
-          value()
-        }
-      }
-    }
-    el.addEventListener('keydown', el._keyHandler)
-  },
-  unbind(el) {
-    el.removeEventListener('keydown', el._keyHandler)
-  }
-}
-
 Vue.directive('focus-trap', focusTrap)
-Vue.directive('escape', escape)

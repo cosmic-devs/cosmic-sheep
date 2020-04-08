@@ -34,7 +34,8 @@ export default {
   */
   plugins: [
     { src: '~/plugins/particles.client.js' },
-    '~/plugins/directives'
+    '~/plugins/v-focus-trap.directive',
+    '~/plugins/v-on-escape.directive'
   ],
   /*
   ** Nuxt.js dev-modules
