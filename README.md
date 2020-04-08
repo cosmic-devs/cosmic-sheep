@@ -1,5 +1,7 @@
 # Cosmic Sheep
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b306650f-abbe-496e-a620-a51d7692c7ca/deploy-status)](https://app.netlify.com/sites/cosmicsheep/deploys)
+
 > We are a young people study group passionated about Urantia Book and its awesome teachings given to this world.
 
 ## Build Setup
