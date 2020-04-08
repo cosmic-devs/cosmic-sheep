@@ -57,7 +57,7 @@
 <script>
   import posts from '~/apollo/queries/posts'
   import BaseModal from '~/components/BaseModal'
-  import ContactForm from "../components/ContactForm";
+  import ContactForm from '~/components/ContactForm'
 
   export default {
     transition: {
