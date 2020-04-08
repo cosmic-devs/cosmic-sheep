@@ -53,12 +53,16 @@ export default {
     '@nuxtjs/apollo',
     '@nuxtjs/markdownit',
     'nuxt-webfontloader',
+    '@nuxtjs/toast',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  toast: {
+    position: 'bottom-right'
   },
   apollo: {
     clientConfigs: {
