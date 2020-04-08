@@ -63,7 +63,6 @@
     },
     methods: {
       init() {
-        console.log('focus child')
         this.$refs.focus.focus()
       },
       sendMessage() {
