@@ -2,15 +2,23 @@
   <transition name="fade" @before-enter="beforeEnter" @after-enter="state.showContent = true"
               @after-leave="afterLeave"
   >
-    <div v-escape="escapeHandler" v-focus-trap v-if="state.show"
+    <div v-on-escape="escapeHandler" v-focus-trap v-if="state.show"
          class="fixed inset-0 z-50 flex min-w-full min-h-full p-5 focus:outline-none"
     >
       <div class="absolute inset-0 w-full h-full c-bg-backdrop" @click.self="$emit('close')"></div>
-      <transition name="scale" @before-leave="state.show = false" @after-enter="afterEnter">
+      <transition name="scale" @before-leave="state.show = false" @after-enter="afterChildEnter">
         <div v-show="state.showContent"
-             class="z-10 w-full max-w-lg max-h-full mx-auto my-auto overflow-auto bg-white rounded-lg shadow-md"
+             class="z-10 flex flex-col w-full max-w-lg max-h-full mx-auto my-auto bg-white rounded-lg shadow-md"
         >
-          <slot/>
+          <div class="flex-initial">
+            <slot name="header"></slot>
+          </div>
+          <div class="flex-1 overflow-auto">
+            <slot/>
+          </div>
+          <div class="flex-initial">
+            <slot name="footer"></slot>
+          </div>
         </div>
       </transition>
     </div>
@@ -30,8 +38,8 @@
       beforeEnter() {
         document.querySelector('html').style.overflowY = 'hidden'
       },
-      afterEnter() {
-        if (this.$parent.init) this.$parent.init()
+      afterChildEnter() {
+        if (this.$children[0].init) this.$children[0].init()
       },
       afterLeave() {
         document.querySelector('html').style.overflowY = 'auto'

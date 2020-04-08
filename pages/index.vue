@@ -1,7 +1,9 @@
 <template>
   <div>
     <!-- Modals -->
-    <contact-modal :state="contactModal" @close="closeContactModal"/>
+    <base-modal :state="contactModal" @close="closeContactModal">
+      <contact-form @close="closeContactModal"/>
+    </base-modal>
     <!-- End Modals -->
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
@@ -54,13 +56,14 @@
 
 <script>
   import posts from '~/apollo/queries/posts'
-  import ContactModal from '~/components/ContactModal'
+  import BaseModal from '~/components/BaseModal'
+  import ContactForm from "../components/ContactForm";
 
   export default {
     transition: {
       name: 'slide-fade'
     },
-    components: {ContactModal},
+    components: {ContactForm, BaseModal},
     data() {
       return {
         contactModal: {
