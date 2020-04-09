@@ -1,5 +1,5 @@
 <template>
-  <form class="px-6 py-3 text-sm text-gray-700" name="contactForm" @submit.prevent="sendMessage">
+  <form id="contact" class="px-6 py-3 text-sm text-gray-700" name="contactForm" @submit.prevent="sendMessage">
     <div class="flex mb-1">
       <div class="w-full mr-4">
         <label class="text-xs text-blue-700" for="floatName">

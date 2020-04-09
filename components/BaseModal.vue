@@ -34,6 +34,33 @@
         required: true
       }
     },
+    watch: {
+      '$route.hash'(value) {
+        // Open the contact modal if user goes to #modal-id
+        // or close the contact modal if user goes out of #modal-id
+        if (value.split('#')[1] === this.state.id) {
+          // We first refresh canGoBack to true because now we have history for sure
+          this.state.canGoBack = true
+          this.state.show = true
+        } else {
+          // We first check for premature back navigation, to cancel the entire modal
+          if (!this.state.showContent) this.state.show = false
+          this.state.showContent = false
+        }
+      }
+    },
+    mounted() {
+      // Open the contact modal if #modal-id is initially in the address bar
+      if (this.$route.hash.split('#')[1] === this.state.id) {
+        this.state.show = true
+        // Set canGoBack to false, since the modal is already open
+        // and the router has no history to go back
+        this.state.canGoBack = false
+      } else {
+        // Set canGoBack to true because there will be history when modal is open
+        this.state.canGoBack = true
+      }
+    },
     methods: {
       beforeEnter() {
         document.querySelector('html').style.overflowY = 'hidden'

@@ -34,7 +34,7 @@
           <p class="mb-3 font-bold text-center text-blue-600 text-xl">
             <a target="_blank" rel="nofollow" href="https://discord.gg/Z4TPUEX">discord</a> ⩩
             <a target="_blank" rel="nofollow" href="https://www.instagram.com/ovelhacosmica">instagram</a> ⩩
-            <span @click="contactModal.show = true" class="cursor-pointer">contato</span>
+            <a :href="'#' + contactModal.id">contato</a>
             <!-- Nosso e-mail: <a class="text-blue-800 hover:text-blue-700" href="mailto:contact@cosmicsheep.io">contact@cosmicsheep.io</a> -->
           </p>
         </div>
@@ -67,6 +67,7 @@
     data() {
       return {
         contactModal: {
+          id: 'contact',
           show: false,
           showContent: false
         }
@@ -89,7 +90,9 @@
         })
       },
       closeContactModal() {
-        this.contactModal.showContent = false
+        this.contactModal.canGoBack
+          ? this.$router.go(-1)
+          : this.$router.replace(this.$route.fullPath.split('#')[0])
       }
     }
   }
