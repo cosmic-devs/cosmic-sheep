@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- Modals -->
-    <base-modal :state="contactModal" @close="closeContactModal">
-      <contact-form @close="closeContactModal"/>
-    </base-modal>
+    <modal :anchor="'#contact'">
+      <contact-form/>
+    </modal>
     <!-- End Modals -->
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
@@ -34,7 +34,7 @@
           <p class="mb-3 font-bold text-center text-blue-600 text-xl">
             <a target="_blank" rel="nofollow" href="https://discord.gg/Z4TPUEX">discord</a> ⩩
             <a target="_blank" rel="nofollow" href="https://www.instagram.com/ovelhacosmica">instagram</a> ⩩
-            <span @click="contactModal.show = true" class="cursor-pointer">contato</span>
+            <a href="#contact">contato</a>
             <!-- Nosso e-mail: <a class="text-blue-800 hover:text-blue-700" href="mailto:contact@cosmicsheep.io">contact@cosmicsheep.io</a> -->
           </p>
         </div>
@@ -56,22 +56,14 @@
 
 <script>
   import posts from '~/apollo/queries/posts'
-  import BaseModal from '~/components/BaseModal'
+  import Modal from '~/components/Modal'
   import ContactForm from '~/components/ContactForm'
 
   export default {
     transition: {
       name: 'slide-fade'
     },
-    components: {ContactForm, BaseModal},
-    data() {
-      return {
-        contactModal: {
-          show: false,
-          showContent: false
-        }
-      }
-    },
+    components: {ContactForm, Modal},
     apollo: {
       posts: {
         query: posts
@@ -87,9 +79,6 @@
           month: '2-digit',
           day: '2-digit'
         })
-      },
-      closeContactModal() {
-        this.contactModal.showContent = false
       }
     }
   }
