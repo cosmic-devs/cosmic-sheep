@@ -1,5 +1,5 @@
 <template>
-  <form id="contact" class="px-6 py-3 text-sm text-gray-700" name="contactForm" @submit.prevent="sendMessage">
+  <form class="px-6 py-3 text-sm text-gray-700" name="contactForm" @submit.prevent="sendMessage">
     <div class="flex mb-1">
       <div class="w-full mr-4">
         <label class="text-xs text-blue-700" for="floatName">
@@ -34,7 +34,7 @@
     </div>
     <div class="flex justify-end mt-4 mb-2">
       <button name="cancel" aria-label="cancel"
-              @click.prevent="$emit('close')"
+              @click.prevent="close"
               class="z-10 mr-4 rounded-lg sm:w-32 button--blue focus:outline-none focus:shadow-outline hvr-outline-out"
       >
         CANCEL
@@ -58,15 +58,17 @@
         message: {
           text: '',
           maxlength: 1000
-        }
+        },
+        close: null
       }
     },
     methods: {
-      init() {
+      init(closeCallback) {
+        this.close = closeCallback
         this.$refs.focus.focus()
       },
       sendMessage() {
-        this.$emit('close')
+        this.close()
         const discord = 'https://discordapp.com/api/webhooks/696743990061563956/_u3EdcrEmA3cqd_X2RTmb0NCvx0plIMmeRFNUgghk8erhaGR6NOl82bY1DE2dsroe71h'
         this.$axios.$post(discord, {
           username: this.name + ' - ' + this.email,
