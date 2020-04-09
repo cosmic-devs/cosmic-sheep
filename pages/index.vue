@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- Modals -->
-    <base-modal :anchor="'#contact'">
+    <modal :anchor="'#contact'">
       <contact-form/>
-    </base-modal>
+    </modal>
     <!-- End Modals -->
     <header class="p-3 text-right border-b border-gray-100 border-solid shadow">
       <div class="mx-auto max-w-2xl">
@@ -56,14 +56,14 @@
 
 <script>
   import posts from '~/apollo/queries/posts'
-  import BaseModal from '~/components/BaseModal'
+  import Modal from '~/components/Modal'
   import ContactForm from '~/components/ContactForm'
 
   export default {
     transition: {
       name: 'slide-fade'
     },
-    components: {ContactForm, BaseModal},
+    components: {ContactForm, Modal},
     apollo: {
       posts: {
         query: posts

@@ -27,7 +27,7 @@
 
 <script>
   export default {
-    name: 'BaseModal',
+    name: 'Modal',
     props: {
       anchor: {
         type: String,
