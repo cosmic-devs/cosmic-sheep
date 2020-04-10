@@ -16,8 +16,8 @@ or
 const blurConfig = {
 
   options: Object.assign({
-    opacity: 0.5,
-    filter: 'blur(1.3px)',
+    opacity: 0.8,
+    filter: 'blur(.06rem)',
     transition: 'all .5s linear'
   }),
 
