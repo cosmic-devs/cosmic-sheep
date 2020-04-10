@@ -86,7 +86,9 @@
       },
       closeModal() {
         this.canGoBack
+          ? this.show || this.showContent
           ? this.$router.go(-1)
+          : false
           : this.$router.replace(this.$route.fullPath.split('#')[0])
       }
     }
