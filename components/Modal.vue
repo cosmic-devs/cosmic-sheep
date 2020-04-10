@@ -54,6 +54,9 @@
           if (!this.showContent) this.show = false
           this.showContent = false
         }
+      },
+      show(value) {
+        this.$emit('blur', value)
       }
     },
     mounted() {

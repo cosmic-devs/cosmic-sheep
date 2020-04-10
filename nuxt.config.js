@@ -34,7 +34,8 @@ export default {
   */
   plugins: [
     '~/plugins/v-focus-trap.directive',
-    '~/plugins/v-on-escape.directive'
+    '~/plugins/v-on-escape.directive',
+    '~/plugins/v-blur.directive'
   ],
   /*
   ** Nuxt.js dev-modules
