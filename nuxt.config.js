@@ -95,9 +95,6 @@ export default {
     */
     extend (config, ctx) {
     },
-    parallel: true,
-    cache: true,
-    hardSource: true
   },
   generate: {
     routes: function () {
