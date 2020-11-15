@@ -18,14 +18,15 @@
       </header>
       <div class="mt-12 mx-auto px-3 max-w-2xl">
         <section class="pb-20 mb-32">
-          <h2 class="mb-6 font-bold text-2xl text-center text-blue-600">Arquivos</h2>
-          <ul class="text-gray-700 text-center">
-            <li class="mb-2 hover:text-blue-400" v-for="post in posts" :key="post.id">
-              <n-link :to="`posts/${post.slug}`">
-                {{ formatDate(post.createdAt) }} - {{ post.title }}
-              </n-link>
-            </li>
-          </ul>
+          <h2 class="mb-6 font-bold text-2xl text-center text-blue-600">Bem-vindos</h2>
+            <p class="text-gray-700 text-center">Estamos em construção, <br>agradeço a compreensão e a visita <br>🐑🚧 </p>
+<!--          <ul class="text-gray-700 text-center">-->
+<!--            <li class="mb-2 hover:text-blue-400" v-for="post in posts" :key="post.id">-->
+<!--              <n-link :to="`posts/${post.slug}`">-->
+<!--                {{ formatDate(post.createdAt) }} - {{ post.title }}-->
+<!--              </n-link>-->
+<!--            </li>-->
+<!--          </ul>-->
         </section>
         <section>
           <div class="text-center">
@@ -33,9 +34,9 @@
               Siga-nos até a próxima esfera:
             </h2>
             <p class="mb-3 font-bold text-center text-blue-600 text-xl">
-              <a target="_blank" rel="nofollow" href="https://discord.gg/Z4TPUEX">discord</a> ⩩
-              <a target="_blank" rel="nofollow" href="https://www.instagram.com/ovelhacosmica">instagram</a> ⩩
-              <a href="#contact">contato</a>
+<!--              <a target="_blank" rel="nofollow" href="https://discord.gg/Z4TPUEX">discord</a> ⩩-->
+<!--              <a target="_blank" rel="nofollow" href="https://www.instagram.com/cosmicsheep.io">instagram</a> ⩩-->
+              <span class="pointer-events-none">⩩</span> <a href="#contact">contato</a>
               <!-- Nosso e-mail: <a class="text-blue-800 hover:text-blue-700" href="mailto:contact@cosmicsheep.io">contact@cosmicsheep.io</a> -->
             </p>
           </div>
