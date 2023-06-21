@@ -17,7 +17,7 @@
     "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/toast": "^3.3.0",
     "apollo-fetch": "latest",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
